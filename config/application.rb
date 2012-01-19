@@ -52,8 +52,11 @@ module GlossyRails
     config.assets.version = '1.0'
     
     # Enable the use of Rails' model generator
-    config.generators do |g|
-      g.orm :mongo_mapper
+    config.generators do |generator|
+      generator.orm :mongo_mapper
     end
+    
+    # The following should already exist in Gemfile
+    # config.gem "mongo_mapper"
   end
 end
