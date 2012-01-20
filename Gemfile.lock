@@ -31,6 +31,8 @@ GEM
       multi_json (~> 1.0)
     ansi (1.4.1)
     arel (2.2.1)
+    backbone-rails (0.5.3.1)
+      rails (>= 3.0.0)
     bson (1.5.2)
     bson_ext (1.5.2)
       bson (= 1.5.2)
@@ -125,6 +127,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  backbone-rails
   bson_ext
   coffee-rails (~> 3.1.1)
   jquery-rails
