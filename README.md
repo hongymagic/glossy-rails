@@ -12,6 +12,7 @@ This project was created so I could better understand `Rails 3.1` and `ruby-lang
 6. Write some tests
 7. Write some `Selenium` tests
 8. Write some `db:seeds`
+9. Read more about Rails 3.2 here: http://guides.rubyonrails.org/3_2_release_notes.html
 
 ## Findings
 
