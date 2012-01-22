@@ -1,4 +1,4 @@
-# Rails 3.1 playground
+# Rails 3.2 playground
 
 This project was created so I could better understand `Rails 3.1` and `ruby-lang`. Occasional fuck ups _are_ okay.
 

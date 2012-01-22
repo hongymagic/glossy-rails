@@ -5,7 +5,6 @@ class DefinitionsController < ApplicationController
     @definitions = Definition.all
 
     respond_to do |format|
-      format.html # index.html.erb
       format.json { render json: @definitions }
     end
   end
@@ -16,7 +15,6 @@ class DefinitionsController < ApplicationController
     @definition = Definition.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
       format.json { render json: @definition }
     end
   end
@@ -27,7 +25,6 @@ class DefinitionsController < ApplicationController
     @definition = Definition.new
 
     respond_to do |format|
-      format.html # new.html.erb
       format.json { render json: @definition }
     end
   end
@@ -44,10 +41,8 @@ class DefinitionsController < ApplicationController
 
     respond_to do |format|
       if @definition.save
-        format.html { redirect_to @definition, notice: 'Definition was successfully created.' }
         format.json { render json: @definition, status: :created, location: @definition }
       else
-        format.html { render action: "new" }
         format.json { render json: @definition.errors, status: :unprocessable_entity }
       end
     end
@@ -60,10 +55,8 @@ class DefinitionsController < ApplicationController
 
     respond_to do |format|
       if @definition.update_attributes(params[:definition])
-        format.html { redirect_to @definition, notice: 'Definition was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
         format.json { render json: @definition.errors, status: :unprocessable_entity }
       end
     end
@@ -76,7 +69,6 @@ class DefinitionsController < ApplicationController
     @definition.destroy
 
     respond_to do |format|
-      format.html { redirect_to definitions_url }
       format.json { head :ok }
     end
   end

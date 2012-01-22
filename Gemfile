@@ -1,11 +1,11 @@
 source 'http://rubygems.org'
 
 # Use specific rails version
-# gem 'rails', '3.1.3'
 gem 'rails', '3.2.0'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+# Replace default template from  :erb to :haml
+gem 'haml'
+gem 'haml-rails'
 
 # Using mongodb
 gem 'mongo_mapper'
@@ -22,10 +22,8 @@ end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# jQuery rails
+# jQuery rails, Backbone
 gem 'jquery-rails'
-
-# Backbone
 gem 'backbone-rails'
 
 # Use unicorn as the web server
