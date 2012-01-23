@@ -13,7 +13,7 @@ var DefinitionsRouter = Backbone.Router.extend({
 		this.definitions.fetch({
 			success: function () {
 				self.DefinitionListView = new DefinitionListView({ model: self.definitions });
-				self.DefinitionListView.render();
+				$('#app').html(self.DefinitionListView.render().el);
 
 				if (self.requestedId) {
 					self.read(self.requestedId);
@@ -33,7 +33,7 @@ var DefinitionsRouter = Backbone.Router.extend({
 			}
 
 			// TODO: this is a cheap way of re-using DefinitionListItemView
-			this.DefinitionListItemView = new DefinitionListItemView({ model: this.definition });
+			this.DefinitionListItemView = new DefinitionListItemView({ model: this.definition, tagName: 'div' });
 			var el = this.DefinitionListItemView.render().el;
 			$('#app').html(el);
 		} else {
