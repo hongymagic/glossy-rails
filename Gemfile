@@ -22,9 +22,10 @@ end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# jQuery rails, Backbone
+# jQuery rails, Backbone, Mustache
 gem 'jquery-rails'
 gem 'backbone-rails'
+gem 'mustache'
 
 # Use unicorn as the web server
 gem 'thin'

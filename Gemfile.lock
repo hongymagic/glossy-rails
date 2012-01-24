@@ -73,6 +73,7 @@ GEM
       activesupport (~> 3.0)
       plucky (~> 0.4.0)
     multi_json (1.0.4)
+    mustache (0.99.4)
     plucky (0.4.4)
       mongo (~> 1.5)
     polyglot (0.3.3)
@@ -137,6 +138,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   mongo_mapper
+  mustache
   rails (= 3.2.0)
   sass-rails (~> 3.2.3)
   thin
