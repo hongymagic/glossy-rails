@@ -1,5 +1,4 @@
 class DefinitionsController < ApplicationController
-  # GET /definitions
   # GET /definitions.json
   def index
     @definitions = Definition.all
@@ -9,7 +8,6 @@ class DefinitionsController < ApplicationController
     end
   end
 
-  # GET /definitions/1
   # GET /definitions/1.json
   def show
     @definition = Definition.find(params[:id])
@@ -19,7 +17,6 @@ class DefinitionsController < ApplicationController
     end
   end
 
-  # GET /definitions/new
   # GET /definitions/new.json
   def new
     @definition = Definition.new
@@ -34,7 +31,6 @@ class DefinitionsController < ApplicationController
     @definition = Definition.find(params[:id])
   end
 
-  # POST /definitions
   # POST /definitions.json
   def create
     @definition = Definition.new(params[:definition])
@@ -48,7 +44,6 @@ class DefinitionsController < ApplicationController
     end
   end
 
-  # PUT /definitions/1
   # PUT /definitions/1.json
   def update
     @definition = Definition.find(params[:id])
@@ -62,7 +57,6 @@ class DefinitionsController < ApplicationController
     end
   end
 
-  # DELETE /definitions/1
   # DELETE /definitions/1.json
   def destroy
     @definition = Definition.find(params[:id])

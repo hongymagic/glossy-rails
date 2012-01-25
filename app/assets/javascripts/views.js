@@ -1,5 +1,6 @@
 var DefinitionListView = Backbone.View.extend({
-	tagName: 'ul',
+	tagName: 'dl',
+	id: 'defintions',
 
 	initialize: function () {
 		this.model.bind('reset', this.render, this);
@@ -20,8 +21,7 @@ var DefinitionListView = Backbone.View.extend({
 
 // Part of DefinitionListView
 var DefinitionListItemView = Backbone.View.extend({
-	tagName: 'li',
-	template: _.template('<h2 id=<%= term %>><%= term %></h2><p class="definition"><%= definition %></p>'),
+	template: _.template('<dt id=<%= term %>><dfn><%= term %></dfn></dt><dd><%= definition %></dd>'),
 
 	initialize: function () {
 		this.model.bind('change', this.render, this);
@@ -31,7 +31,7 @@ var DefinitionListItemView = Backbone.View.extend({
 	render: function () {
 		console.log('DefinitionListItemView#render', this.el, this.model.toJSON());
 
-		$(this.el).html(this.template(this.model.toJSON()));
+		this.el = $(this.template(this.model.toJSON()));
 		return this;
 	},
 

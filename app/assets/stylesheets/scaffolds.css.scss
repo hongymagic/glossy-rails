@@ -1,27 +1,43 @@
-body { 
-  margin: 0.5em auto;
-  width: 420px;
+/**
+ * Simple definition list styling for glossy-rails project
+ * see: https://github.com/hongymagic/glossy-rails
+ */
+body { color: #222; font: normal normal 400 200%/140% Arial, sans-serif; background-image: linear-gradient(45deg, #434343, #212121); }
 
-  font: normal normal 400 100%/140% Helvetica, Arial, sans-serif; 
+h1, dl { margin: 15px auto; padding: 15px; width: 500px;  }
+dl { position: relative; top: -1000px; }
+dt, dd { margin: 0; padding: 0 25px; background: #222; color: #d5d5d5; }
+dd a, dd a:visited { color: #a0a0a0; text-decoration: none; }
+
+h1 { color: #dfdfdf; text-shadow: 0px -1px #eee; }
+dt { margin-top: 1em; border: 1px solid #222; border-bottom: 0; border-top-left-radius: 5px; border-top-right-radius: 5px; padding: 0.4em 25px;}
+dt:nth-child(3n+2) { color: orange; }
+dt:nth-child(3n+1) { color: yellow; }
+dt:nth-child(3n) { color: #f06; }
+dt:first-child { margin-top: 0; }
+dt dfn { font-style: normal; font-weight: 700; }
+dd { border: 1px solid #222; border-top: 0; padding: 1em 25px; font-size: 75%; box-shadow:  inset 0 0 50px #000000;}
+
+/* Animations */
+@keyframes show {
+  0% {
+    top: -1000px;   
+  }
+  80% {
+    top: 50px;
+  }
+  100% {
+    top: 0;
+  }
 }
 
-#app {
-  ul {
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-
-    li {
-      margin: 1em 0;
-      padding: 0.1em 1em;
-
-      background-color: #f5f5f5;
-      background-image: -webkit-linear-gradient(top, #ddd, #f5f5f5);
-      background-image: linear-gradient(top, #ddd, #f5f5f5);
-
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-  }
+dl {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.17,.67,1,.14);
+  animation-delay: 0ms, 0ms;
+  
+  top: 0;
 }
