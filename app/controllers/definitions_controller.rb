@@ -4,6 +4,7 @@ class DefinitionsController < ApplicationController
     @definitions = Definition.all
 
     respond_to do |format|
+      format.html
       format.json { render json: @definitions }
     end
   end

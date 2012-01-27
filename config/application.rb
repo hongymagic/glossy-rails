@@ -54,7 +54,7 @@ module GlossyRails
     # Enable the use of Rails' model generator
     config.generators do |generator|
       generator.orm :mongo_mapper
-      generator.template_engine :haml
+      generator.template_engine :mustache
     end
   end
 end
