@@ -1,5 +1,7 @@
 # Rails 3.2 playground
 
+[![Build Status](https://secure.travis-ci.org/hongymagic/glossy-rails.png)](http://travis-ci.org/hongymagic/glossy-rails)
+
 This project was created so I could better understand `Rails 3.2` and `ruby-lang`. Occasional fuck ups _are_ okay.
 
 ## Still to learn
