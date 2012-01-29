@@ -1,4 +1,6 @@
 GlossyRails::Application.routes.draw do
+  resources :meanings
+
   resources :definitions
 
   get "home/index"
