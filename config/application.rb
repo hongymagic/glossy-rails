@@ -51,7 +51,7 @@ module GlossyRails
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     
-    # Enable the use of Rails' model generator
+    # Enable the use of Rails' model/view generator
     config.generators do |generator|
       generator.orm :mongo_mapper
       generator.template_engine :mustache

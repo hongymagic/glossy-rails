@@ -4,8 +4,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.0'
 
 # Replace default template from  :erb to :haml
-gem 'haml'
-gem 'haml-rails'
+gem 'mustache'
+# gem 'mustache_rails3' # This is a broken open-source project
 
 # Using mongodb
 gem 'mongo_mapper'
@@ -25,7 +25,6 @@ end
 # jQuery rails, Backbone, Mustache
 gem 'jquery-rails'
 gem 'backbone-rails'
-gem 'mustache'
 
 # Use unicorn as the web server
 gem 'thin'
