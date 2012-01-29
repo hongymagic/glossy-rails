@@ -19,9 +19,9 @@ This project was created so I could better understand Rails 3.2 and `ruby-lang`.
 In the order I wish to implement:
 
 1. Complete Backbone.js routes and views
-2. Convert views/templates to use `Mustache` (this is so much easier on `Node.js`)
-3. Re-create server views that work without Backbone.js
-4. Styling, add some CSS3 animations (without JS hooks for triggering animation)
+2. <del>Convert views/templates to use `Mustache` (this is so much easier on `Node.js`)</del>
+3. <del>Re-create server views that work without Backbone.js</del>
+4. <del>Styling, add some CSS3 animations (without JS hooks for triggering animation)</del>
 
 ## Findings
 

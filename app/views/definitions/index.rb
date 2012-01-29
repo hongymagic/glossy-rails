@@ -1,5 +1,10 @@
 class Definitions::Index < Mustache::Rails
-	def Text
-		"Hello World"
+	def listing
+		definitions.collect do |record|
+			{
+				:term => record.term,
+				:definition => record.definition
+			}
+		end
 	end
 end
