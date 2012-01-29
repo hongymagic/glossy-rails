@@ -1,4 +1,3 @@
-//= require prefix-free
 //= require jquery
 //= require backbone-rails
 //= require models
