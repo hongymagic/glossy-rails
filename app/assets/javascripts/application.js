@@ -1,3 +1,4 @@
 //= require jquery
 //= require backbone-rails
-//= require_tree ./libs/requirejs
+//= require requirejs/require
+//= require main
