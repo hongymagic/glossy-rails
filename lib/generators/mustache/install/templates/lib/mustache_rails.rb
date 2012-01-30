@@ -40,7 +40,7 @@ class Mustache
     # Mustache::Rails::Config.template_base_path = Rails.root.join('app', 'templates')
     module Config
       def self.template_base_path
-        @template_base_path ||= ::Rails.root.join('app', 'templates')
+        @template_base_path ||= ::Rails.root.join('app', 'assets', 'templates')
       end
 
       def self.template_base_path=(value)
@@ -56,7 +56,7 @@ class Mustache
       end
 
       def self.shared_path
-        @shared_path ||= ::Rails.root.join('app', 'templates', 'shared')
+        @shared_path ||= ::Rails.root.join('app', 'assets', 'templates', 'shared')
       end
 
       def self.shared_path=(value)
