@@ -8,6 +8,7 @@
 			paths: {
 				underscore: 'assets/underscore',
 				Backbone: 'assets/backbone',
+				Mustache: 'assets/mustache',
 				text: 'assets/requirejs/text',
 
 				/* Our own Backbone app modules */

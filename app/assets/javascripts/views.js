@@ -1,30 +1,36 @@
-define(['text!assets/definitions/index.html.mustache'], function (definitionsIndexTemplate) {
-	console.log(definitionsIndexTemplate);
-	
+define([
+		'Mustache', 
+		'text!assets/definitions/index.html.mustache',
+		'text!assets/definitions/_definition.html.mustache'
+	], function (Mustache, $$list, $$item) {
 	var DefinitionListView = Backbone.View.extend({
-		tagName: 'dl',
-		id: 'defintions',
+		template: $$list,
+
+		// This is the view model required by the Mustache templates
+		viewModel: function () {
+			return {
+				listing: this.model.toJSON()
+			};
+		},
 
 		initialize: function () {
 			this.model.bind('reset', this.render, this);
 			this.model.bind('add', function (definition) {
-				$(this.el).append(new DefinitionListItemView({ mode: definition }).render().el);
+				$(this.el).append(new DefinitionListItemView({ model: definition }).render().el);
 			});
 		},
 
 		render: function () {
 			console.log('DefinitionListView#render', this.el, this.model.toJSON());
 
-			_.each(this.model.models, function (definition) {
-				$(this.el).append(new DefinitionListItemView({ model: definition }).render().el);
-			}, this);
+ 			this.el = Mustache.to_html(this.template, this.viewModel(), { definition: $$item });
 			return this;
 		}
 	});
 
 	// Part of DefinitionListView
 	var DefinitionListItemView = Backbone.View.extend({
-		template: _.template('<dt id=<%= term %>><dfn><%= term %></dfn></dt><dd><%= definition %></dd>'),
+		template: $$item,
 
 		initialize: function () {
 			this.model.bind('change', this.render, this);
@@ -34,7 +40,7 @@ define(['text!assets/definitions/index.html.mustache'], function (definitionsInd
 		render: function () {
 			console.log('DefinitionListItemView#render', this.el, this.model.toJSON());
 
-			this.el = $(this.template(this.model.toJSON()));
+			this.el = Mustache.to_html(this.template, this.model.toJSON());
 			return this;
 		},
 
